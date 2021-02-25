@@ -95,8 +95,13 @@
 					delay = 0,
 					$panel;
 
+				const hash = window.location.hash;
+				const pageList = [ "who", "what", "portfolio", "elements" ]
+
 				// Get panel.
-					if (window.location.hash && window.location.hash != '#')
+					if ( !pageList.includes( hash.replace( "#", "" ) ) )
+						window.location.href = window.location.href.split( "#" )[ 0 ]
+					else if ( hash && hash !== '#' )
 						$panel = $(window.location.hash);
 					else
 						$panel = $panels.first();
