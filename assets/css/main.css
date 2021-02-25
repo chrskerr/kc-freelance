@@ -1262,6 +1262,8 @@ input, select, textarea {
 		transition: opacity 0.5s ease, transform 0.5s ease;
 		max-width: calc(100vw - 6em);
 		width: 86em;
+		min-height: 490px;
+		max-height: calc(100vh - 10em);
 	}
 
 		.panel > .image {
@@ -1274,7 +1276,7 @@ input, select, textarea {
 			background-repeat: no-repeat;
 			background-size: cover;
 			border-radius: 0;
-			min-height: 50em;
+			min-height: calc(100vh - 10em);
 			width: 50%;
 			z-index: 1;
 		}
@@ -1362,6 +1364,7 @@ input, select, textarea {
 			-webkit-justify-content: space-between;
 			-ms-justify-content: space-between;
 			justify-content: space-between;
+			overflow: scroll;
 		}
 
 			.panel.secondary > .content > .actions {
@@ -1381,7 +1384,7 @@ input, select, textarea {
 			}
 
 				.panel > .image {
-					min-height: 45em;
+					/* min-height: 45em; */
 				}
 
 		}
@@ -1393,7 +1396,7 @@ input, select, textarea {
 			}
 
 				.panel > .image {
-					min-height: 35em;
+					/* min-height: 35em; */
 				}
 
 				.panel > .content {
@@ -1409,6 +1412,7 @@ input, select, textarea {
 				-webkit-flex-direction: column;
 				-ms-flex-direction: column;
 				flex-direction: column;
+				max-height: unset;
 			}
 
 				.panel > .image {
@@ -1420,6 +1424,7 @@ input, select, textarea {
 					display: block;
 					padding: 3em;
 					width: 100%;
+					overflow: unset;
 				}
 
 					.panel > .content:after {

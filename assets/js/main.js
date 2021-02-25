@@ -96,7 +96,7 @@
 					$panel;
 
 				const hash = window.location.hash;
-				const pageList = [ "who", "what", "portfolio", "elements" ]
+				const pageList = [ "", "who", "what", "portfolio", "elements" ]
 
 				// Get panel.
 					if ( !pageList.includes( hash.replace( "#", "" ) ) )
