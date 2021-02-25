@@ -4,5 +4,3 @@ This favicon was generated using the following font:
 - Font Author: Copyright 2010 The Raleway Project Authors (impallari@gmail.com), with Reserved Font Name "Raleway".
 - Font Source: http://fonts.gstatic.com/s/raleway/v19/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaooCPNLA3JC9c.ttf
 - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)
-
-Source https://favicon.io/favicon-generator/
