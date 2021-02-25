@@ -153,7 +153,7 @@ input, select, textarea {
 
 	strong, b {
 		color: #555;
-		font-weight: 500;
+		font-weight: 800;
 	}
 
 	em, i {
@@ -198,6 +198,11 @@ input, select, textarea {
 	h5 {
 		font-size: 0.9em;
 	}
+
+		h5.inline {
+			display: inline-block;
+			margin: 0;
+		}
 
 	h6 {
 		font-size: 0.7em;
@@ -1312,6 +1317,10 @@ input, select, textarea {
 			width: 50%;
 		}
 
+		.panel > .content.full {
+			width: 100%;
+		}
+
 		.panel.inactive {
 			opacity: 0;
 		}
@@ -1592,3 +1601,27 @@ input, select, textarea {
 		body.is-preload-0 #footer {
 			opacity: 0;
 		}
+
+	/* Portfolio  */
+
+	.portfolio {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+	
+		.portfolio > .portfolio-item {
+			width: 30%;
+			margin-bottom: 4rem;
+			text-align: center;
+		}
+
+			.portfolio > .portfolio-item > a:first-of-type {
+				border-bottom: none;
+			}
+
+			.portfolio > .portfolio-item > a > img {
+				width: 100%;
+			}

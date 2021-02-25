@@ -4,6 +4,8 @@
 	License: pixelarity.com/license
 */
 
+const pageList = [ "", "who", "what", "portfolio" ];
+
 (function($) {
 
 	var	$window = $(window),
@@ -96,13 +98,13 @@
 					$panel;
 
 				const hash = window.location.hash;
-				const pageList = [ "", "who", "what", "portfolio", "elements" ]
+				const href = window.location.href;
 
 				// Get panel.
 					if ( !pageList.includes( hash.replace( "#", "" ) ) )
-						window.location.href = window.location.href.split( "#" )[ 0 ]
+						window.location.href = href.split( "#" )[ 0 ]
 					else if ( hash && hash !== '#' )
-						$panel = $(window.location.hash);
+						$panel = $(hash);
 					else
 						$panel = $panels.first();
 
@@ -194,9 +196,14 @@
 
 				var $panel;
 
+				const hash = window.location.hash;
+				const href = window.location.href;
+
 				// Get panel.
-					if (window.location.hash && window.location.hash != '#')
-						$panel = $(window.location.hash);
+					if ( !pageList.includes( hash.replace( "#", "" ) ) )
+						window.location.href = href.split( "#" )[ 0 ]
+					else if ( hash && hash !== '#' )
+						$panel = $(hash);
 					else
 						$panel = $panels.first();
 
@@ -236,5 +243,14 @@
 				$('.actions.animated').removeClass('animated');
 
 		}
+
+		// Modal Close
+			$wrapper.on( 'click', () => {
+				window.location.hash = ""
+			})
+
+			$panels.on( 'click', e => {
+				e.stopPropagation()
+			})
 
 })(jQuery);
