@@ -1608,13 +1608,12 @@ input, select, textarea {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
 		width: 100%;
 	}
 	
 		.portfolio > .portfolio-item {
-			width: 30%;
-			margin-bottom: 4rem;
+			width: calc( 100% / 3 );
+			padding: 2rem;
 			text-align: center;
 		}
 
@@ -1624,4 +1623,6 @@ input, select, textarea {
 
 			.portfolio > .portfolio-item > a > img {
 				width: 100%;
+				border: solid 1px rgba( 0, 0, 0, 0.1 );
+				border-radius: 7px;
 			}
