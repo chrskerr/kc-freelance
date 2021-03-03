@@ -1373,7 +1373,7 @@ input, select, textarea {
 			-webkit-justify-content: space-between;
 			-ms-justify-content: space-between;
 			justify-content: space-between;
-			overflow: scroll;
+			overflow-y: scroll;
 		}
 
 			.panel.secondary > .content > .actions {
@@ -1626,3 +1626,15 @@ input, select, textarea {
 				border: solid 1px rgba( 0, 0, 0, 0.1 );
 				border-radius: 7px;
 			}
+
+	@media screen and (max-width: 736px) {
+		.portfolio > .portfolio-item {
+			width: calc( 100% / 2 );
+		}
+	}
+	
+	@media screen and (max-width: 480px) {
+		.portfolio > .portfolio-item {
+			width: calc( 100% / 1 );
+		}
+	}
